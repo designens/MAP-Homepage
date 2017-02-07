@@ -1,0 +1,45 @@
+{
+    "name": "framework",
+    "description": "맵(개편 서비스 고도화)",
+    "main": "gulpfile.js",
+    "authors": [
+    "Cristina_jiy"
+  ],
+    "license": "ISC",
+    "keywords": [
+    "susy",
+    "jquery",
+    "font-awesome",
+    "svg-injector"
+  ],
+    "homepage": "http://publishing.dunamu.io/map-homepage/html/all.html",
+    "private": true,
+    "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+    "devDependencies": {
+        "jquery": "^3.1.1",
+        "susy": "^2.2.12",
+        "font-awesome": "^4.7.0",
+        "svg-injector": "^1.1.3"
+    },
+    "preen": {
+        "jquery": [
+      "dist/jquery.min.js"
+    ],
+        "susy": [
+      "sass/**"
+    ],
+        "font-awesome": [
+      "fonts/**",
+      "css/**"
+    ],
+        "svg-injector": [
+      "dist/svg-injector.min.js"
+    ]
+    }
+}
