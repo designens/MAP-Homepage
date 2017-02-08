@@ -1,0 +1,29 @@
+// 뷰크기 정가운데 배치
+@mixin wh-center ($position: relative, $h-percent: 50%, $w-percent: 50%) {
+	position: $position;
+	top: $h-percent;
+	left: $w-percent;
+	transform: translate(-$h-percent, -$w-percent);
+}
+
+// 가로 기준 가운데 배치
+@mixin w-center ($position: relative, $w-percent: 50%) {
+	position: $position;
+	left: $w-percent;
+	transform: translateX(-$w-percent);
+}
+
+// 세로 기준 가운데 배치
+@mixin h-center ($position: relative, $h-percent: 50%) {
+	position: $position;
+	top: $h-percent;
+	transform: translateY(-$h-percent);
+}
+
+// Conteiner 가운데 배치
+@mixin wrap-center ($dp: block, $width: null) {
+    display: $dp;
+    width: $width;
+    margin-left: auto;
+    margin-right: auto;
+}

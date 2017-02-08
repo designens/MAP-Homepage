@@ -1,0 +1,35 @@
+// =======================================
+// Fonts Style Settings
+// =======================================
+
+// 다국어(한일중) 웹 폰트 설정 (Noto Sans(본고딕), Roboto)
+@import url(http://fonts.googleapis.com/css?family=Noto+Sans|Roboto);
+
+// Font Family 기본 설정 (영문서체를 우선순위로 작성)
+$ff: 'Roboto', 'Noto Sans', sans-serif;
+// 국문 서체
+$ff-ko: 'Noto Sans', sans-serif;
+// 영문 서체
+$ff-en: 'Roboto', sans-serif;
+
+// 웹폰트 기본 설정
+html {
+    font-size: $html-fz;
+    body {
+        font-family: $ff;
+        // 본문 폰트 사이즈
+        @include psd-fz(32px, 2);
+        letter-spacing: -0.05em;
+        line-height: $line-height;
+        color: $ft-base;
+    }
+}
+// 국문 폰트 설정
+:lang(ko) {
+    font-family: $ff-ko;
+}
+// 영문 폰트 설정
+:lang(en) {
+    font-family: $ff-en;
+    letter-spacing: normal;
+}

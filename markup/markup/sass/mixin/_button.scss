@@ -1,0 +1,25 @@
+// 버튼 기본 디자인 설정 (PSD 기준사이즈)
+@mixin btn($fz: 16px, $color: #fff, $width: 150px, $height: 45px, $padding: 10px, $radius: 3px, $bg: $btn-default, $ratio: 1) {
+  font-size: rem($fz, $ratio);
+  color: $color;
+  min-width: rem($width, $ratio);
+  padding: 0 rem($padding, $ratio);
+  // 높이, 행간 설정
+  height: $height;
+  $height: rem($height, $ratio);
+  line-height: $height;
+  border-radius: $radius;
+  background: $bg;
+}
+
+// 버튼 기본 속성 정의
+button[class^="btn-"],
+input[class^="btn-"] {
+  box-sizing: border-box;
+  cursor: pointer !important;
+}
+button[class^="btn-"]:-webkit-full-screen-ancestor,
+input[class^="btn-"]:-webkit-full-screen-ancestor {
+  padding-top: 0.2rem;
+  padding-bottom: 0.2rem;
+}

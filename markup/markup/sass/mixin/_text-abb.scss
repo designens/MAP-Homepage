@@ -1,0 +1,7 @@
+@mixin text-abb ($width, $height) {
+		width: $width;
+		height: $height;
+		overflow: hidden;
+		text-overflow:ellipsis;
+		white-space:nowrap;
+}

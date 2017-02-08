@@ -1,0 +1,9 @@
+// Heading Font Size & Line-height 설정
+@mixin heading ($psd-fz, $retina) {
+    $fz: $psd-fz / $retina;
+    $lh: $fz * $line-height;
+    font-size: $fz;
+    font-size: rem($fz);
+    line-height: $lh;
+    line-height: rem($lh);
+}

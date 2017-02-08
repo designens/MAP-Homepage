@@ -1,0 +1,109 @@
+// =======================================
+// Framework import
+// =======================================
+@import "dnm-style";
+@import "lib/font-awesome/css/font-awesome.min";
+
+// =======================================
+// Conmmon Main guide
+// =======================================
+h1, h2, h3, h4, h5, h6 {
+    @include psd-mb($body-fz, bottom);
+}
+body {
+    background: #ededed;
+}
+.wrap {
+    article {
+        padding: rem(20px, 1);
+        .title {
+            color: #222;
+            letter-spacing: normal;
+            margin-bottom: rem(44px, 2);
+            &:before {
+                content: "\f013";
+                font-family: FontAwesome;
+                font-size: rem(32px, 2);
+                color: #fb5324;
+                padding-right: rem(20px, 2);
+            }
+        }
+        .box {
+            padding: rem(20px, 1);
+            border: 1px solid $bd-title;
+            background: #fff;
+        }
+    }
+    // 타이포그라피
+    .typography {
+        .text {
+            p {
+                margin-bottom: $base-line-height;
+            }
+        }
+    }
+    // 사이트맵
+    .all-link {
+        .location {
+            p {
+                letter-spacing: normal;
+                line-height: rem(48px, 2);
+                &:before {
+                    content: "\f0c1";
+                    font-family: FontAwesome;
+                    font-size: rem(20px, 2);
+                    color: #ccc;
+                    padding-right: rem(10px, 2);
+                }
+                a {
+                    color: #333;
+                }
+                span {
+                    font-size: rem(24px, 2);
+                    color: #aaa;
+                    &:before {
+                        content: "(";
+                    }
+                    &:after {
+                        content: ")";
+                    }
+                }
+            }
+        }
+    }
+    // 폰트어썸
+    .font-awesime {
+        .icon {
+            p {
+                letter-spacing: normal;
+                .fa {
+                    padding-right: rem(20px, 2);
+                }
+                .contant {
+                    font-size: rem(24px, 2);
+                    color: #aaa;
+                    &:before {
+                        content: "(css : ";
+                    }
+                    &:after {
+                        content: ")";
+                    }
+                }
+            }
+        }
+    }
+    .etc-box {
+        .title {
+            margin-top: rem(44px, 2);
+            margin-bottom: rem(44px, 2);
+            &:first-child {
+                margin-top: 0;
+            }
+        }
+        .box {
+            .btn-list {
+                @include btn;
+            }
+        }
+    }
+}

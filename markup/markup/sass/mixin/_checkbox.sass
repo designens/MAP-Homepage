@@ -1,0 +1,35 @@
+// =======================================
+// checkbox Style
+// =======================================
+=checkbox($span_mr: 8px, $label_mr: 20px, $btn_size: 20px, $bd-color: #bbb)
+  display: none
+  + label
+    margin-right: $label_mr
+    span
+      display: inline-block
+      width: $btn_size
+      height: $btn_size
+      text-align: center
+      background: #fff
+      border: 1px solid $bd-color
+      border-radius: 3px
+      box-sizing: border-box
+      vertical-align: top
+      cursor: pointer
+      margin-right: $span_mr
+  &:checked
+    + label span
+      position: relative
+      background: $ck-base
+      border: 1px solid $ck-base
+      &:before
+        position: absolute
+        top: -1px
+        left: 2px
+        +fa($icon: "\f00c", $fz: 14px)
+        color: #fff
+  &:disabled
+    + label
+      span
+        background: #e2e6ec
+        border: 1px solid $bd-color

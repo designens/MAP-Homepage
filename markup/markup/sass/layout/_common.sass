@@ -1,0 +1,96 @@
+// =======================================
+// Common Style
+// =======================================
+html
+    body
+        min-width: $wm
+        max-width: $wd
+        min-height: 100vh
+
+// Checkbox Style
+input[type=checkbox]
+  +checkbox
+
+// Radio button Style
+input[type=radio]
+  +radiobox
+
+//Paging Style
+.paging
+    button
+        width: 38px
+        height: 38px
+        border-radius: 3px
+        &:hover, &:focus
+            background: $bd-inner
+    .fa-angle-left, .fa-angle-right
+        font-size: 21px
+        line-height: 38px
+    span
+        a
+            display: inline-block
+            min-width: 38px
+            height: 38px
+            line-height: 38px
+            text-align: center
+            border-radius: 3px
+            &:hover, &:focus
+                background: $bd-inner
+            &:active, &.active
+                background: $btn-default
+                color: #fff
+    .mobile.active
+        color: $btn-default
+        font-weight: bold
+    .pc
+        display: none
+    .mobile
+        display: inline-block
+    @include susy-breakpoint($wt)
+        .pc
+            display: inline-block
+        .mobile
+            display: none
+
+
+// Inputbox Style
+.icon-type
+    position: relative
+    display: inline-block
+    height: 50px
+    line-height: 50px
+    border: 1px solid $text-input
+    border-radius: 3px
+    box-sizing: border-box
+    padding: 0 15px
+    .fa-phone
+        font-size: 21px
+        color: #bbb
+        padding-right: 6px
+        vertical-align: middle
+    input
+        min-width: 250px
+        &::-webkit-input-placeholder
+            color: $ft-summary
+
+
+
+// Container
+.wrap
+    min-width: $wm
+    margin-left: 0
+    margin-right: 0
+    @include susy-breakpoint($wt)
+        max-width: $wt
+        margin-left: auto
+        margin-right: auto
+
+// Clearfix
+.row:after, .row::after
+    @extend %clearfix
+
+// Hearder
+header
+
+// Footer
+footer

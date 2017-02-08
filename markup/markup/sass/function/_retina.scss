@@ -1,0 +1,5 @@
+// Retina Design Size 설정
+// $ratio: 2(기본값) => 1/2 사이즈로 변환
+@function retina ($unit, $ratio: 2) {
+  @return round($unit/$ratio);
+}

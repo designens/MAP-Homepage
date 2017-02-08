@@ -1,0 +1,6 @@
+@mixin fa ($icon: " ", $fz: 16px) {
+    font-family: 'FontAwesome';
+    content: $icon;
+    font-size: $fz;
+    font-size: rem($fz);
+}

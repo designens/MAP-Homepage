@@ -1,0 +1,52 @@
+// =======================================
+// Media Queries Variables (Device)
+// =======================================
+// Mobile Breakpoint
+$wm: 320px;
+// Table Breakpoint
+$wt: 760px;
+// Desktop Breakpoint
+$wd: 1280px;
+
+// =======================================
+// Base Font Size & line height
+// =======================================
+// Rem 단위 계산을 위한 기본 사이즈 설정
+$html-fz: 10px;
+// Base Font Size
+$body-fz: 16px * 2;
+// 본문 기본 행간 비율
+$line-height: 1.5;
+// Base Line Height
+$base-line-height : 20px;
+
+// =======================================
+// Grid System Style
+// =======================================
+$susy: (
+	// 유동형(fluid), 고정형(static) width 설정 (fluid, static)
+	math: fluid,
+
+	// Columns
+	columns: 15,
+
+	// Gutters
+	// 거터의 폭 설정 (1/4, <gutter-width>/<column-width>)
+	gutters: 20px/64px,
+
+	// 거터의 방향 설정 (after, before, split, inside, inside-static)
+	gutter-position: split,
+
+	// Debug
+	debug: (
+		// 그리드 이미지: (hide, show, show-columns, show-baseline)
+		image: hide,
+		// image: show,
+
+		color: rgba(#4590E6, 0.25),
+
+		// 그리드 모드: (background, overlay)
+		output: overlay,
+		// output: background,
+	)
+);

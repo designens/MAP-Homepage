@@ -1,0 +1,33 @@
+// =======================================
+// Radio button Style
+// =======================================
+=radiobox ($span_mr: 8px, $label_mr: 20px, $btn_size: 18px, $bd-color: #bbb, $fz: 12px)
+  display: none
+  + label
+    margin-right: $label_mr
+    span
+      display: inline-block
+      position: relative
+      width: $btn_size
+      height: $btn_size
+      text-align: center
+      background: #fff
+      border: 1px solid $bd-color
+      border-radius: $btn_size
+      vertical-align: text-top
+      cursor: pointer
+      margin-right: $span_mr
+  &:checked
+    + label span
+      position: relative
+      background: $ck-base
+      border: 1px solid $ck-base
+      &:before
+        display: block
+        +fa($icon: "\f00c", $fz: 14px)
+        color: #fff
+  &:disabled
+    + label
+      span
+        background: #e2e6ec
+        border-color: $bd-color

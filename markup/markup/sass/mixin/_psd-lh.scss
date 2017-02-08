@@ -1,0 +1,6 @@
+// 행간 설정 (line-height)
+@mixin psd-lh ($lh, $retina) {
+    $x: $lh / $retina;
+    line-height: $x;
+    line-height: rem($x);
+}
